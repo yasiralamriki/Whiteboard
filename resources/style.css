@@ -1,0 +1,77 @@
+/* Style to cover full screen and apply the pattern */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* From Uiverse.io by kennyotsu */ 
+main {
+    width: 100vw;
+    height: 100vh;
+    /* Add your background pattern here */
+    background-color: #09090b;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.25) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
+}
+
+#tools-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 99px;
+    border: 1px solid #27272a;
+    padding: 16px;
+    background-color: #18181b;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 16px 16px 0 0;
+}
+
+#tools-button {
+    padding: 8px 16px;
+    background-color: #27272a;
+    color: #fafafa;
+    border: none;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+#zoom-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 99px;
+    border: 1px solid #27272a;
+    padding: 16px;
+    background-color: #18181b;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: 0 16px 16px 0;
+}
+
+#zoom-level {
+    color: #fafafa;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: calc(1.5 / 1);
+}
+
+#zoom-button {
+    padding: 8px 16px;
+    background-color: #27272a;
+    color: #fafafa;
+    border: none;
+    border-radius: 99px;
+    cursor: pointer;
+}
