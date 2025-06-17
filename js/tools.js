@@ -1,5 +1,5 @@
 let selectedTool = 'select'; // Default tool
-const canvas = document.getElementById('main'); // Canvas element
+const canvas = document.getElementById('canvas'); // Canvas element
 
 // Mouse drag functionality
 let isPanning = false;

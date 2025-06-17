@@ -10,12 +10,14 @@ body, html {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    /* Hide scrollbars */
+    overflow: hidden;
 }
 
 /* From Uiverse.io by kennyotsu */ 
-main {
-    width: 100vw;
-    height: 100vh;
+#canvas {
+    width: 4096px;
+    height: 4096px;
     /* Add your background pattern here */
     background-color: #09090b;
     background-image: radial-gradient(rgba(255, 255, 255, 0.25) 2px, transparent 0);
