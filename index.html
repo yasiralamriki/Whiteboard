@@ -17,18 +17,19 @@
     <main id="main">
         <canvas id="canvas"></canvas>
         <div id="tools-container">
-            <button id="tools-button" class="material-symbols-outlined">pan_tool</button>
-            <button id="tools-button" class="material-symbols-outlined">brush</button>
-            <button id="tools-button" class="material-symbols-outlined">ink_eraser</button>
+            <button class="material-symbols-outlined fill">pan_tool</button>
+            <button class="material-symbols-outlined">brush</button>
+            <button class="material-symbols-outlined">ink_eraser</button>
         </div>
         <div id="zoom-container">
-            <button id="zoom-button" class="material-icons" onclick="zoom(-10)">zoom_out</button>
+            <button class="material-icons" onclick="zoom(-10)">zoom_out</button>
             <span id="zoom-level">100%</span>
-            <button id="zoom-button" class="material-icons" style="transform: scaleX(-1);" onclick="zoom(10)">zoom_in</button>
+            <button class="material-icons" style="transform: scaleX(-1);" onclick="zoom(10)">zoom_in</button>
         </div>
     </main>
     <script src="index.js"></script>
     <script src="js/zoom.js"></script>
     <script src="js/tools.js"></script>
+    <script src="js/ui.js"></script>
   </body>
 </html>

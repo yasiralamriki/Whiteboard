@@ -41,15 +41,6 @@ body, html {
     margin: 16px 16px 0 0;
 }
 
-#tools-button {
-    padding: 8px 16px;
-    background-color: #27272a;
-    color: #fafafa;
-    border: none;
-    border-radius: 99px;
-    cursor: pointer;
-}
-
 #zoom-container {
     display: flex;
     flex-direction: row;
@@ -73,11 +64,25 @@ body, html {
     line-height: calc(1.5 / 1);
 }
 
-#zoom-button {
+button {
     padding: 8px 16px;
     background-color: #27272a;
     color: #fafafa;
     border: none;
     border-radius: 99px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #3f3f46;
+}
+
+.fill {
+    background-color: #fafafa;
+    color: #27272a;
+}
+
+.fill:hover {
+    background-color: #fafafa;
+    color: #27272a;
 }
