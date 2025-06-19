@@ -13,12 +13,3 @@ function zoom(multiplier) {
         canvas.style.transformOrigin = '0 0'; // top-left corner
     }
 }
-
-function wheel(event) {
-    event.preventDefault();
-
-    /* Zoom in or out with mouse wheel data
-    Result must be reversed otherwise it will zoom out when scrolling up.
-    And divided by 10 to zoom in the same as the buttons */
-    zoom(Math.ceil((-event.deltaY / 10) / 10) * 10)
-}

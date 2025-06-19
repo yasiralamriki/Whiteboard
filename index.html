@@ -15,7 +15,9 @@
   </head>
   <body>
     <main id="main">
-        <canvas id="canvas" onwheel="wheel(event)"></canvas>
+        <!-- Result must be reversed otherwise it will zoom out when scrolling up.
+        And divided by 10 to zoom in the same as the buttons -->
+        <canvas id="canvas" onwheel="zoom(Math.ceil((-event.deltaY / 10) / 10) * 10)"></canvas>
         <div id="tools-container">
             <button class="material-symbols-outlined fill">pan_tool</button>
             <button class="material-symbols-outlined">brush</button>
