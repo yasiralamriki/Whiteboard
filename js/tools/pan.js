@@ -1,4 +1,5 @@
-let selectedTool = 'select'; // Default tool
+import * as toolsManager from './toolsManager.js'; // Importing tools manager to handle tool selection
+
 const canvas = document.getElementById('canvas'); // Canvas element
 
 // Mouse drag functionality
@@ -7,7 +8,7 @@ let startX, startY;
 let bgPosX = 0, bgPosY = 0;
 
 canvas.addEventListener('mousedown', (e) => {
-    if (selectedTool !== 'select' || document.elementFromPoint(e.clientX, e.clientY) !== canvas) return;
+    if (toolsManager.getSelectedTool() !== 'pan' || document.elementFromPoint(e.clientX, e.clientY) !== canvas) return;
     isPanning = true;
     startX = e.clientX;
     startY = e.clientY;
@@ -15,7 +16,7 @@ canvas.addEventListener('mousedown', (e) => {
 });
 
 window.addEventListener('mousemove', (e) => {
-    if (!isPanning || selectedTool !== 'select') return;
+    if (!isPanning || toolsManager.getSelectedTool() !== 'pan') return;
     if (document.elementFromPoint(e.clientX, e.clientY) == canvas) {
         const dx = e.clientX - startX;
         const dy = e.clientY - startY;
@@ -26,7 +27,7 @@ window.addEventListener('mousemove', (e) => {
 });
 
 window.addEventListener('mouseup', (e) => {
-    if (!isPanning || selectedTool !== 'select') return;
+    if (!isPanning || toolsManager.getSelectedTool() !== 'pan') return;
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
     bgPosX += dx;
