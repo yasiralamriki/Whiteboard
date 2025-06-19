@@ -1,6 +1,8 @@
 import * as toolsManager from './tools/toolsManager.js'; // Importing tools manager to handle tool selection
 import './zoom.js' // Importing zoom functionality
 import './tools/pan.js' // Importing pan tool functionality
+import './tools/brush.js' // Importing brush tool functionality
+import './tools/eraser.js' // Importing eraser tool functionality
 
 const toolsContainer = document.getElementById("tools-container"); // Get the tools container element
 const buttons = toolsContainer.querySelectorAll("button"); // Get all buttons within the tools container

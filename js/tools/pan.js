@@ -20,7 +20,7 @@ window.addEventListener('mousemove', (e) => {
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
     canvas.style.backgroundPosition = `${bgPosX + dx}px ${bgPosY + dy}px`;
-    canvas.style.cursor = 'default';
+    canvas.style.cursor = 'grabbing';
 });
 
 window.addEventListener('mouseup', (e) => {
@@ -30,5 +30,5 @@ window.addEventListener('mouseup', (e) => {
     bgPosX += dx;
     bgPosY += dy;
     isPanning = false;
-    canvas.style.cursor = '';
+    canvas.style.cursor = 'default';
 });
