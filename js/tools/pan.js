@@ -8,7 +8,7 @@ let startX, startY;
 let bgPosX = 0, bgPosY = 0;
 
 canvas.addEventListener('mousedown', (e) => {
-    if (toolsManager.getSelectedTool() !== 'pan' || document.elementFromPoint(e.clientX, e.clientY) !== canvas) return;
+    if (toolsManager.getSelectedTool() !== 'pan') return;
     isPanning = true;
     startX = e.clientX;
     startY = e.clientY;
@@ -17,13 +17,10 @@ canvas.addEventListener('mousedown', (e) => {
 
 window.addEventListener('mousemove', (e) => {
     if (!isPanning || toolsManager.getSelectedTool() !== 'pan') return;
-    if (document.elementFromPoint(e.clientX, e.clientY) == canvas) {
-        const dx = e.clientX - startX;
-        const dy = e.clientY - startY;
-        canvas.style.backgroundPosition = `${bgPosX + dx}px ${bgPosY + dy}px`;
-    } else {
-        canvas.style.cursor = 'default';
-    }
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    canvas.style.backgroundPosition = `${bgPosX + dx}px ${bgPosY + dy}px`;
+    canvas.style.cursor = 'default';
 });
 
 window.addEventListener('mouseup', (e) => {
