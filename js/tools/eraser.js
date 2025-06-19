@@ -12,7 +12,6 @@ canvas.addEventListener('mousedown', (e) => {
     isErasing = true;
     startX = e.clientX;
     startY = e.clientY;
-    canvas.style.cursor = "url('../../resources/cursors/eraser.svg'), auto";
 });
 
 window.addEventListener('mousemove', (e) => {
@@ -20,7 +19,6 @@ window.addEventListener('mousemove', (e) => {
     /*const dx = e.clientX - startX;
     const dy = e.clientY - startY;
     canvas.style.backgroundPosition = `${bgPosX + dx}px ${bgPosY + dy}px`;*/
-    canvas.style.cursor = "url('../../resources/cursors/eraser.svg'), auto";
 });
 
 window.addEventListener('mouseup', (e) => {
@@ -30,5 +28,4 @@ window.addEventListener('mouseup', (e) => {
     bgPosX += dx;
     bgPosY += dy;*/
     isErasing = false;
-    canvas.style.cursor = 'default';
 });
