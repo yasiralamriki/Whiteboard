@@ -11,7 +11,7 @@ function zoom(multiplier) {
         // Update the zoom level
         zoomLevel += multiplier;
         canvas.style.transform = `scale(${zoomLevel / 100})`;
-        canvas.style.transformOrigin = '0 0'; // top-left corner
+        canvas.style.transformOrigin = `0 0`; // Set the origin to the top-left corner
     }
 }
 
