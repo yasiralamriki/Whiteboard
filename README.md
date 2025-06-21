@@ -4,7 +4,7 @@
 
 ### About
 
-**Whiteboard** is a Excallidraw inspired whiteboard web application, using only pure JavaScript, CSS, and HTML; no frameworks such as React JS, or Tailwind CSS involved.
+**Whiteboard** is an Excallidraw inspired whiteboard web application, using only pure JavaScript, CSS, and HTML; no frameworks such as React JS, or Tailwind CSS involved.
 This project ~~was~~ is being developed primarily for Summer of Making 2025
 
 ## Demo
