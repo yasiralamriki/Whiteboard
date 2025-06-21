@@ -5,7 +5,6 @@
 ### About
 
 **Whiteboard** is an Excallidraw inspired whiteboard web application, using only pure JavaScript, CSS, and HTML; no frameworks such as React JS, or Tailwind CSS involved.
-This project ~~was~~ is being developed primarily for Summer of Making 2025
 
 ## Demo
 Visit [here](https://whiteboard-liart-rho.vercel.app/) to view the website deployed on Vercel
