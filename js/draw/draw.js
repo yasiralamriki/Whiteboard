@@ -5,7 +5,7 @@ export function draw(cursorX, cursorY, tool) {
     if (tool && tool.isActive == true && tool.name == 'brush') {
         ctx.fillStyle = '#fafafa';
         ctx.beginPath();
-        ctx.arc(cursorX, cursorY+32, 5, 0, (360 * Math.PI / 180), false);
+        ctx.arc(cursorX, cursorY+32, 5, 0, 360, false);
         ctx.fill();
     }
 }

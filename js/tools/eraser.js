@@ -2,30 +2,29 @@ import * as toolsManager from './toolsManager.js'; // Importing tools manager to
 
 const canvas = document.getElementById('canvas'); // Canvas element
 
+// Eraser tool class
+const eraserTool = new toolsManager.Tool('eraser', false);
+
 // Eraser tool functionality
-let isErasing = false;
-let startX, startY;
-let bgPosX = 0, bgPosY = 0;
+let cursorX, cursorY;
 
-canvas.addEventListener('mousedown', (e) => {
-    if (toolsManager.getSelectedTool() !== 'eraser') return;
-    isErasing = true;
-    startX = e.clientX;
-    startY = e.clientY;
+['mousedown', 'touchdown'].forEach(eventName => {
+    canvas.addEventListener(eventName, (e) => {
+        if (toolsManager.getSelectedTool !== 'eraser') return;
+        // Placeholder
+    });
 });
 
-window.addEventListener('mousemove', (e) => {
-    if (!isErasing || toolsManager.getSelectedTool() !== 'eraser') return;
-    /*const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
-    canvas.style.backgroundPosition = `${bgPosX + dx}px ${bgPosY + dy}px`;*/
+['mousemove', 'touchmove'].forEach(eventName => {
+    canvas.addEventListener(eventName, (e) => {
+        if (!eraserTool.isActive || toolsManager.getSelectedTool !== 'eraser') return;
+        // Placeholder
+    });
 });
 
-window.addEventListener('mouseup', (e) => {
-    if (!isErasing || toolsManager.getSelectedTool() !== 'eraser') return;
-    /*const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
-    bgPosX += dx;
-    bgPosY += dy;*/
-    isErasing = false;
+['mouseup', 'touchup'].forEach(eventName => {
+    canvas.addEventListener(eventName, (e) => {
+        if (!eraserTool.isActive || toolsManager.getSelectedTool !== 'eraser') return;
+        // Placeholder
+    });
 });
