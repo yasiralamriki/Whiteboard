@@ -1,3 +1,10 @@
+/*
+    * File: zoom.js
+    * Description: This module handles zooming functionality for a canvas element.
+    * Last edited: 1446/12/26
+    * Author: Yasir Al Amriki
+*/
+
 let zoomLevel = 100; // Default zoom level in percentage
 const canvas = document.getElementById('canvas'); // Canvas element
 const zoomLevelElement = document.getElementById('zoom-level'); // Element to display the current zoom level

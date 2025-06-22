@@ -1,3 +1,10 @@
+/*
+    * File: brush.js
+    * Description: This file implements the brush tool for drawing on a canvas.
+    * Last edited: 1446/12/26
+    * Author: Yasir Al Amriki
+*/
+
 import * as toolsManager from './toolsManager.js'; // Importing tools manager to handle tool selection
 import { draw } from '../draw/draw.js'; // Importing draw functionality
 import { getPanOffset } from './pan.js'; // Importing pan offset functionality

@@ -1,3 +1,10 @@
+/*
+    * File: ui.js
+    * Description: This module handles the user interface for selecting tools in a drawing application.
+    * Last edited: 1446/12/26
+    * Author: Yasir Al Amriki
+*/
+
 import * as toolsManager from './tools/toolsManager.js'; // Importing tools manager to handle tool selection
 import './zoom.js' // Importing zoom functionality
 import './tools/pan.js' // Importing pan tool functionality

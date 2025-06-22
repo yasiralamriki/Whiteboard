@@ -1,3 +1,10 @@
+/*
+    * File: eraser.js
+    * Description: This file implements the eraser tool for removing drawings on a canvas.
+    * Last edited: 1446/12/26
+    * Author: Yasir Al Amriki
+*/
+
 import * as toolsManager from './toolsManager.js'; // Importing tools manager to handle tool selection
 
 const canvas = document.getElementById('canvas'); // Canvas element

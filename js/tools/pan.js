@@ -1,3 +1,10 @@
+/*
+    * File: pan.js
+    * Description: This file implements the pan tool for moving the canvas background.
+    * Last edited: 1446/12/26
+    * Author: Yasir Al Amriki
+*/
+
 import * as toolsManager from './toolsManager.js'; // Importing tools manager to handle tool selection
 
 const canvas = document.getElementById('canvas'); // Canvas element

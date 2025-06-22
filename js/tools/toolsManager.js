@@ -1,3 +1,10 @@
+/*
+    * File: toolsManager.js
+    * Description: This module manages the selection and state of drawing tools in a canvas application.
+    * Last edited: 1446/12/26
+    * Author: Yasir Al Amriki
+*/
+
 let selectedTool = 'pan'; // Default tool
 const canvas = document.getElementById('canvas'); // Canvas element
 

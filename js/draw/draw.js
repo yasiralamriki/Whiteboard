@@ -1,3 +1,10 @@
+/*
+    * File: draw.js
+    * Description: This module handles the drawing of a brush cursor on a canvas.
+    * Last edited: 1446/12/26
+    * Author: Yasir Al Amriki
+*/
+
 import { getZoomLevel } from "../zoom.js";
 
 const canvas = document.getElementById('canvas'); // Canvas element
