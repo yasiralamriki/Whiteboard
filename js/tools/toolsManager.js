@@ -1,6 +1,14 @@
 let selectedTool = 'pan'; // Default tool
 const canvas = document.getElementById('canvas'); // Canvas element
 
+// Tool class
+export class Tool {
+    constructor(name, isActive = false) {
+        this.name = name;
+        this.isActive = isActive;
+    }
+}
+
 // Get selected tool
 export function getSelectedTool() {
     return selectedTool;
