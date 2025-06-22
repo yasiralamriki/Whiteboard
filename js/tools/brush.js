@@ -1,5 +1,7 @@
 import * as toolsManager from './toolsManager.js'; // Importing tools manager to handle tool selection
 import { draw } from '../draw/draw.js'; // Importing draw functionality
+import { getPanOffset } from './pan.js'; // Importing pan offset functionality
+import { getZoomLevel } from '../zoom.js'; // Importing zoom level functionality
 
 const canvas = document.getElementById('canvas'); // Canvas element
 const ctx = canvas.getContext("2d"); // 2D rendering context for the canvas
@@ -20,8 +22,10 @@ let cursorX, cursorY;
 ['mousemove', 'touchmove'].forEach(eventName => {
     canvas.addEventListener(eventName, (e) => {
         if (!brushTool.isActive || toolsManager.getSelectedTool() !== 'brush') return;
-        cursorX = e.clientX;
-        cursorY = e.clientY;
+        const rect = canvas.getBoundingClientRect();
+        const zoom = getZoomLevel() / 100;
+        cursorX = (e.clientX - rect.left) / zoom;
+        cursorY = (e.clientY - rect.top) / zoom;
     });
 });
 
@@ -33,8 +37,9 @@ let cursorX, cursorY;
 });
 
 function animationLoop() {
+    const panOffset = getPanOffset(); // Get the current pan offset
     // Get cursorX, cursorY, and tool from your app's state
-    draw(cursorX, cursorY, brushTool);
+    draw(cursorX, cursorY, brushTool, panOffset);
     requestAnimationFrame(animationLoop);
 }
 animationLoop();

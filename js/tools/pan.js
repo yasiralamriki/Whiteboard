@@ -40,3 +40,8 @@ let bgPosX = 0, bgPosY = 0;
         canvas.style.cursor = 'default';
     });
 });
+
+// Export pan offset for other modules
+export function getPanOffset() {
+    return { x: bgPosX, y: bgPosY };
+}

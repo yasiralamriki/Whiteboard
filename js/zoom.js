@@ -15,5 +15,9 @@ function zoom(multiplier) {
     }
 }
 
+export function getZoomLevel() {
+    return zoomLevel;
+}
+
 window.zoom = zoom; // Expose the zoom function globally
 zoom(0); // Initialize zoom level to 100%
