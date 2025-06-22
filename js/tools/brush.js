@@ -10,20 +10,26 @@ const brushTool = new toolsManager.Tool('brush', false);
 // Brush tool functionality
 let cursorX, cursorY;
 
-canvas.addEventListener('mousedown', (e) => {
-    if (toolsManager.getSelectedTool() !== 'brush') return;
-    brushTool.isActive = true;
+['mousedown', 'touchdown'].forEach(eventName => {
+    canvas.addEventListener(eventName, (e) => {
+        if (toolsManager.getSelectedTool() !== 'brush') return;
+        brushTool.isActive = true;
+    });
 });
 
-window.addEventListener('mousemove', (e) => {
-    if (!brushTool.isActive || toolsManager.getSelectedTool() !== 'brush') return;
-    cursorX = e.clientX;
-    cursorY = e.clientY;
+['mousemove', 'touchmove'].forEach(eventName => {
+    canvas.addEventListener(eventName, (e) => {
+        if (!brushTool.isActive || toolsManager.getSelectedTool() !== 'brush') return;
+        cursorX = e.clientX;
+        cursorY = e.clientY;
+    });
 });
 
-window.addEventListener('mouseup', (e) => {
-    if (!brushTool.isActive || toolsManager.getSelectedTool() !== 'brush') return;
-    brushTool.isActive = false;
+['mouseup', 'touchup'].forEach(eventName => {
+    canvas.addEventListener(eventName, (e) => {
+        if (!brushTool.isActive || toolsManager.getSelectedTool() !== 'brush') return;
+        brushTool.isActive = false;
+    });
 });
 
 function animationLoop() {
